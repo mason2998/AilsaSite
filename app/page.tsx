@@ -1,6 +1,23 @@
-'use client';
+"use client";
+
+import { ServiceCard, ProjectCard, TestimonialCard } from '../components';
 
 export default function Home() {
+  const services = [
+    {
+      title: 'Brand Positioning',
+      description: 'Define your unique value proposition and market position with strategic clarity.'
+    },
+    {
+      title: 'Brand Naming',
+      description: 'Craft distinctive, memorable names that capture the essence of your brand.'
+    },
+    {
+      title: 'Strategy Development',
+      description: 'Build comprehensive brand strategies aligned with your business goals.'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-[#fafbf8]">
       {/* Navigation */}
@@ -51,25 +68,8 @@ export default function Home() {
             What I Do
           </h3>
           <div className="grid md:grid-cols-3 gap-12">
-            {[
-              {
-                title: "Brand Positioning",
-                description: "Define your unique value proposition and market position with strategic clarity."
-              },
-              {
-                title: "Brand Naming",
-                description: "Craft distinctive, memorable names that capture the essence of your brand."
-              },
-              {
-                title: "Strategy Development",
-                description: "Build comprehensive brand strategies aligned with your business goals."
-              }
-            ].map((service, idx) => (
-              <div key={idx} className="space-y-4">
-                <div className="w-12 h-12 bg-[#d4eae0] rounded-full"></div>
-                <h4 className="text-xl font-semibold text-[#2d3d36]">{service.title}</h4>
-                <p className="text-[#666] leading-relaxed">{service.description}</p>
-              </div>
+            {services.map((service, idx) => (
+              <ServiceCard key={idx} title={service.title} description={service.description} />
             ))}
           </div>
         </div>
@@ -109,16 +109,12 @@ export default function Home() {
           </h3>
           <div className="grid md:grid-cols-2 gap-12">
             {[
-              { name: "Tech Startup Rebrand", category: "Strategy & Naming" },
-              { name: "Luxury Brand Positioning", category: "Positioning" },
-              { name: "Corporate Identity", category: "Brand Architecture" },
-              { name: "DTC Brand Launch", category: "Full Strategy" }
+              { name: 'Tech Startup Rebrand', category: 'Strategy & Naming' },
+              { name: 'Luxury Brand Positioning', category: 'Positioning' },
+              { name: 'Corporate Identity', category: 'Brand Architecture' },
+              { name: 'DTC Brand Launch', category: 'Full Strategy' }
             ].map((project, idx) => (
-              <div key={idx} className="bg-[#fafbf8] rounded-2xl p-8 hover:shadow-lg transition">
-                <div className="bg-gradient-to-br from-[#d4eae0] to-[#a8d5ba] h-48 rounded-lg mb-6"></div>
-                <h4 className="text-xl font-semibold text-[#2d3d36] mb-2">{project.name}</h4>
-                <p className="text-[#7cc491] text-sm">{project.category}</p>
-              </div>
+              <ProjectCard key={idx} name={project.name} category={project.category} />
             ))}
           </div>
         </div>
@@ -133,18 +129,15 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12">
             {[
               {
-                quote: "Ailsa transformed how we think about our brand. Her strategic insights were invaluable.",
-                author: "Sarah Chen, CEO"
+                quote: 'Ailsa transformed how we think about our brand. Her strategic insights were invaluable.',
+                author: 'Sarah Chen, CEO'
               },
               {
-                quote: "Working with Ailsa was a game-changer. She brought clarity to our positioning.",
-                author: "James Mitchell, CMO"
+                quote: 'Working with Ailsa was a game-changer. She brought clarity to our positioning.',
+                author: 'James Mitchell, CMO'
               }
             ].map((testimonial, idx) => (
-              <div key={idx} className="space-y-4">
-                <p className="text-lg italic leading-relaxed">"{testimonial.quote}"</p>
-                <p className="font-semibold">{testimonial.author}</p>
-              </div>
+              <TestimonialCard key={idx} quote={testimonial.quote} author={testimonial.author} />
             ))}
           </div>
         </div>
