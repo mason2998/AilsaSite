@@ -3,9 +3,9 @@
 :root {
   --background: #fafbf8;
   --foreground: #2d3d36;
-  --primary: #a8d5ba;
-  --primary-dark: #7cc491;
-  --primary-light: #d4eae0;
+  --primary: #ad9fdb;
+  --primary-dark: #2e1c6c;
+  --primary-light: #ad9fdb;
   --font-body: "tt-commons-pro", sans-serif;
   --font-headers: "cofo-glassier", sans-serif;
 }

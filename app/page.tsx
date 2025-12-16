@@ -26,14 +26,14 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 sm:px-8 py-6 flex justify-between items-start">
           <div className="relative h-32 w-40">
             <h1 className="text-3xl font-bold text-[#2d3d36] relative z-10" style={{ fontFamily: 'var(--font-playfair)' }}>
-              Ailsa
+              Edwards Studio
             </h1>
           </div>
           <ul className="hidden md:flex gap-8 text-sm text-[#2d3d36]">
-            <li><a href="#services" className="hover:text-[#7cc491] transition">Services</a></li>
-            <li><a href="#about" className="hover:text-[#7cc491] transition">About</a></li>
-            <li><a href="#work" className="hover:text-[#7cc491] transition">Work</a></li>
-            <li><a href="#contact" className="hover:text-[#7cc491] transition">Contact</a></li>
+            <li><a href="#services" className="hover:text-[#2e1c6c] transition">Services</a></li>
+            <li><a href="#about" className="hover:text-[#2e1c6c] transition">About</a></li>
+            <li><a href="#work" className="hover:text-[#2e1c6c] transition">Work</a></li>
+            <li><a href="#contact" className="hover:text-[#2e1c6c] transition">Contact</a></li>
           </ul>
         </div>
       </header>
@@ -42,22 +42,24 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-6 sm:px-8 py-20 sm:py-32 relative">
         <Blob color="#98153d" size={1600} top="-115%" left="-50%" opacity={0.8} zIndex={0} />
         <div className="space-y-6 max-w-2xl relative z-10">
-          <h2 className="text-5xl sm:text-6xl font-bold text-[#2d3d36] leading-tight" style={{ fontFamily: 'var(--font-playfair)' }}>
+          <h2 className="text-5xl sm:text-6xl font-bold text-black leading-tight" style={{ fontFamily: 'var(--font-playfair)' }}>
             Brand Strategy & Management
           </h2>
-          <p className="text-lg text-[#555] leading-relaxed font-light">
-            I work with ambitious brands and business leaders to clarify positioning, craft compelling narratives, and build brands that resonate.
+          <p className="text-lg text-[#111] leading-relaxed font-light">
+            I help businesses with a growth mindset revitalise, relaunch and refocus.<br/><br/>
+            At Edwards Studio, I bring together strategy, design and marketing to create work that not only looks great but delivers results. Every business is different, so I take the time to understand your goals and challenges before building the right approach for you.
+
           </p>
           <div className="pt-8 flex flex-col sm:flex-row gap-4">
             <a
               href="#contact"
-              className="inline-block px-8 py-3 bg-[#a8d5ba] text-[#2d3d36] font-semibold rounded-full hover:bg-[#7cc491] transition text-center"
+              className="inline-block px-8 py-3 bg-[#ffa68d] text-[#2d3d36] font-semibold rounded-full hover:bg-[#ad9fdb] transition text-center"
             >
               Get in Touch
             </a>
             <a
               href="#work"
-              className="inline-block px-8 py-3 border-2 border-[#a8d5ba] text-[#2d3d36] font-semibold rounded-full hover:bg-[#d4eae0] transition text-center"
+              className="inline-block px-8 py-3 bg-[#ffa68d] text-[#2d3d36] font-semibold rounded-full hover:bg-[#ad9fdb] transition text-center"
             >
               See My Work
             </a>
@@ -80,7 +82,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="bg-[#fafbf8] py-20 sm:py-32">
+      <section id="about" className="bg-[#fafbf8] py-20 sm:py-25">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center relative z-1">
             <div className="space-y-6">
@@ -95,18 +97,18 @@ export default function Home() {
               </p>
               <a
                 href="#contact"
-                className="inline-block text-[#7cc491] font-semibold hover:text-[#a8d5ba] transition"
+                className="inline-block text-[#98153d] font-semibold hover:text-[#ad9fdb] transition"
               >
                 Learn more →
               </a>
             </div>
-            <div className="bg-gradient-to-br from-[#d4eae0] to-[#a8d5ba] h-64 sm:h-80 rounded-2xl"></div>
+            <div className="bg-gradient-to-br from-[#ad9fdb] to-[#2e1c6c] h-64 sm:h-80 rounded-2xl"></div>
           </div>
         </div>
       </section>
 
       {/* Work Section */}
-      <section id="work" className="bg-[#fafbf8] py-20 sm:py-32">
+      <section id="work" className="bg-[#fafbf8] py-20 sm:py-25">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <Blob color="#ff3f26" size={2000} top="20%" right="-60%" opacity={0.6} zIndex={0} />
           <Blob color="#ffa68d" size={1500} bottom="20%" left="0%" opacity={0.5} zIndex={1} />
@@ -162,7 +164,7 @@ export default function Home() {
           </div>
           <div className="space-y-4">
             <p>
-              <a href="mailto:ailsa@example.com" className="text-[#7cc491] font-semibold hover:text-[#a8d5ba] transition text-lg">
+              <a href="mailto:ailsa@example.com" className="text-[#98153d] font-semibold hover:text-[#ad9fdb] transition text-lg">
                 ailsa@example.com
               </a>
             </p>
@@ -173,7 +175,7 @@ export default function Home() {
           <div className="pt-8">
             <a
               href="mailto:ailsa@example.com"
-              className="inline-block px-10 py-4 bg-[#a8d5ba] text-[#2d3d36] font-semibold rounded-full hover:bg-[#7cc491] transition"
+              className="inline-block px-10 py-4 bg-[#ffa68d] text-[#2d3d36] font-semibold rounded-full hover:bg-[#ad9fdb] transition"
             >
               Send Me a Message
             </a>
@@ -182,7 +184,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#2d3d36] text-white py-12">
+      <footer className="bg-[#98153d] text-white py-12">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-300">
             <p>© 2025 Ailsa. All rights reserved.</p>
