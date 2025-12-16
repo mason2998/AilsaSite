@@ -1,6 +1,6 @@
 "use client";
 
-import { ServiceCard, ProjectCard, TestimonialCard } from '../components';
+import { ServiceCard, ProjectCard, TestimonialCard, Blob } from '../components';
 
 export default function Home() {
   const services = [
@@ -19,13 +19,16 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#fafbf8]">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-[#d4eae0]">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-[#2d3d36]" style={{ fontFamily: 'var(--font-playfair)' }}>
-            Ailsa
-          </h1>
+    <div className="min-h-screen bg-[#fafbf8] overflow-hidden relative">
+      {/* Background Blobs */}
+      {/* Header */}
+      <header className="sticky top-0 z-50 bg-transparent">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 py-6 flex justify-between items-start">
+          <div className="relative h-32 w-40">
+            <h1 className="text-3xl font-bold text-[#2d3d36] relative z-10" style={{ fontFamily: 'var(--font-playfair)' }}>
+              Ailsa
+            </h1>
+          </div>
           <ul className="hidden md:flex gap-8 text-sm text-[#2d3d36]">
             <li><a href="#services" className="hover:text-[#7cc491] transition">Services</a></li>
             <li><a href="#about" className="hover:text-[#7cc491] transition">About</a></li>
@@ -33,11 +36,12 @@ export default function Home() {
             <li><a href="#contact" className="hover:text-[#7cc491] transition">Contact</a></li>
           </ul>
         </div>
-      </nav>
+      </header>
 
       {/* Hero Section */}
-      <section className="max-w-6xl mx-auto px-6 sm:px-8 py-20 sm:py-32">
-        <div className="space-y-6 max-w-2xl">
+      <section className="max-w-6xl mx-auto px-6 sm:px-8 py-20 sm:py-32 relative">
+        <Blob color="#98153d" size={1600} top="-115%" left="-50%" opacity={0.8} zIndex={0} />
+        <div className="space-y-6 max-w-2xl relative z-10">
           <h2 className="text-5xl sm:text-6xl font-bold text-[#2d3d36] leading-tight" style={{ fontFamily: 'var(--font-playfair)' }}>
             Brand Strategy & Management
           </h2>
@@ -62,7 +66,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="bg-white py-20 sm:py-32">
+      <section id="services" className="bg-[#ffa68d] py-20 sm:py-32">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <h3 className="text-4xl font-bold text-[#2d3d36] mb-16 text-center" style={{ fontFamily: 'var(--font-playfair)' }}>
             What I Do
@@ -78,7 +82,7 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="bg-[#fafbf8] py-20 sm:py-32">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center relative z-1">
             <div className="space-y-6">
               <h3 className="text-4xl font-bold text-[#2d3d36]" style={{ fontFamily: 'var(--font-playfair)' }}>
                 About Me
@@ -102,12 +106,14 @@ export default function Home() {
       </section>
 
       {/* Work Section */}
-      <section id="work" className="bg-white py-20 sm:py-32">
+      <section id="work" className="bg-[#fafbf8] py-20 sm:py-32">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
-          <h3 className="text-4xl font-bold text-[#2d3d36] mb-16 text-center" style={{ fontFamily: 'var(--font-playfair)' }}>
+          <Blob color="#ff3f26" size={2000} top="20%" right="-60%" opacity={0.6} zIndex={0} />
+          <Blob color="#ffa68d" size={1500} bottom="20%" left="0%" opacity={0.5} zIndex={1} />
+          <h3 className="text-4xl font-bold text-[#2d3d36] mb-16 text-center relative z-2" style={{ fontFamily: 'var(--font-playfair)' }}>
             Recent Work
           </h3>
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-12 z-10">
             {[
               { name: 'Tech Startup Rebrand', category: 'Strategy & Naming' },
               { name: 'Luxury Brand Positioning', category: 'Positioning' },
@@ -121,7 +127,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-gradient-to-br from-[#a8d5ba] to-[#7cc491] py-20 sm:py-32 text-white">
+      <section className="bg-[#ffa68d] py-20 sm:py-32 text-white">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <h3 className="text-4xl font-bold mb-16 text-center" style={{ fontFamily: 'var(--font-playfair)' }}>
             What Clients Say
@@ -144,7 +150,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-white py-20 sm:py-32">
+      <section id="contact" className="bg-[#fafbf8] py-20 sm:py-32">
         <div className="max-w-2xl mx-auto px-6 sm:px-8 text-center space-y-8">
           <div>
             <h3 className="text-4xl font-bold text-[#2d3d36] mb-6" style={{ fontFamily: 'var(--font-playfair)' }}>
