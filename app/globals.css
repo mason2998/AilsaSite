@@ -3,16 +3,11 @@
 :root {
   --background: #fafbf8;
   --foreground: #2d3d36;
-  --primary: #a8d5ba;
-  --primary-dark: #7cc491;
-  --primary-light: #d4eae0;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-lato);
-  --font-serif: var(--font-playfair);
+  --primary: #ad9fdb;
+  --primary-dark: #2e1c6c;
+  --primary-light: #ad9fdb;
+  --font-body: "tt-commons-pro", sans-serif;
+  --font-headers: "cofo-glassier", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,11 +20,25 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-lato), sans-serif;
+  font-family: var(--font-body);
+  font-weight: 200;
+  font-style: normal;
+}
+
+body.italic {
+  font-weight: 200;
+  font-style: italic;
+}
+
+.subheading {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-playfair), serif;
-  font-weight: 700;
+  font-family: var(--font-headers);
+  font-weight: 400;
+  font-style: normal;
 }
 
